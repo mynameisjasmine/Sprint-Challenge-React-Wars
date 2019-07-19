@@ -22,23 +22,25 @@ useEffect(() => {
    .catch(err => console.log(err));
 }, [])
 console.log("people:", people);
-  /*const keyName = Object.keys(people).map((keyName, i) => {
-     return keyName[i].name
- }) */
- 
- //nameKeys.forEach(nameKey => nameKey.name)
+
+ if(!people) {
+  return <h1>Loading..</h1>
+ }else{
+
   return (
     <div className="App">
-     {/* {Object.keys(people).map((keyName, i) => (<Card value= {keyName.value} key= {i}/>
-    ))}  */}
-     {people.map(person => <Card value={person} />)}
-      <h1 className="Header">React Wars</h1>
-      <Header
-     link={people.url}
-            />
+    <h1 className="Header">React Wars</h1>
+    <Header link={people.url} />
+    {people.map(person => <Card value={person} />)}
+      
+      
     
     </div>
   );
+ }
+  
+ 
+ 
 }
 
 
