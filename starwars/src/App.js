@@ -1,10 +1,11 @@
 import React, { useState, useEffect }  from 'react';
 import axios from "axios";
 import './App.css';
-
+import Header from "./Header.js";
+import Card from "./Card.js"
 
 function App() {
-  const [yavin, setYavin] = useState({});
+  const [people, setPeople] = useState({});
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -13,16 +14,26 @@ function App() {
   // sync up with, if any.
 useEffect(() => {
    axios
-   .get(`https://swapi.co/api/planets/3/`)
+   .get(`https://swapi.co/api/people/`)
    .then(response => {
-     console.log("response data:", response.data)
-     setYavin(response.data)
+     console.log("response data:", response.data);
+     setPeople(response.data);
    })
    .catch(err => console.log(err));
 }, [])
+console.log("people:", people)
+ Object.keys(people).map((keyName, i) => {
+)}
+ 
+ //nameKeys.forEach(nameKey => nameKey.name)
   return (
     <div className="App">
+     {people[keyName]}
       <h1 className="Header">React Wars</h1>
+      <Header
+     name={people.name} 
+     link={people.url}
+            />
     </div>
   );
 }
