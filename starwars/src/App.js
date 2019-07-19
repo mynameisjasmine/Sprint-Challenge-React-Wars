@@ -5,7 +5,7 @@ import Header from "./Header.js";
 import Card from "./Card.js"
 
 function App() {
-  const [people, setPeople] = useState({});
+  const [people, setPeople] = useState();
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -14,26 +14,29 @@ function App() {
   // sync up with, if any.
 useEffect(() => {
    axios
-   .get(`https://swapi.co/api/people/`)
+   .get(`https://henry-mock-swapi.herokuapp.com/api`)
    .then(response => {
      console.log("response data:", response.data);
-     setPeople(response.data);
+     setPeople(response.data.results);
    })
    .catch(err => console.log(err));
 }, [])
-console.log("people:", people)
- Object.keys(people).map((keyName, i) => {
-)}
+console.log("people:", people);
+  /*const keyName = Object.keys(people).map((keyName, i) => {
+     return keyName[i].name
+ }) */
  
  //nameKeys.forEach(nameKey => nameKey.name)
   return (
     <div className="App">
-     {people[keyName]}
+     {/* {Object.keys(people).map((keyName, i) => (<Card value= {keyName.value} key= {i}/>
+    ))}  */}
+     {people.map(person => <Card value={person} />)}
       <h1 className="Header">React Wars</h1>
       <Header
-     name={people.name} 
      link={people.url}
             />
+    
     </div>
   );
 }

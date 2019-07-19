@@ -5,7 +5,8 @@ function Card(props) {
     return(
  <div className="people-card">
 
-    <p>{props.films}</p>
+    <p>{props.value.films}</p>
+    <p>{props.value.name}</p>
 </div>
 );
 

@@ -6,7 +6,6 @@ import styled from 'styled-components';
 function Header(props) {
     return(
         <div>
-        <p>{props.name}</p>
         <p>{props.link}</p>
          </div>
     )
