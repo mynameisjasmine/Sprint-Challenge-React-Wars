@@ -25,8 +25,7 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
-
-It's a javascript library, it allows devs to create large applications which can change data without having to reload the page.
+## It's a javascript library, it allows devs to create large applications which can change data without having to reload the page. ##
 
 
 
@@ -36,19 +35,19 @@ It's a javascript library, it allows devs to create large applications which can
 
 
 - [ ] Describe state.
-State is an object that holds data that may change
+## State is an object that holds data that may change ##
 
 
 
 - [ ] Describe props.
-
-A way to share code between React components
+## A way to share code between React components ##
 
 
 
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+## Anything that affects something outside of the scope of the function being executed. You can sync effects by using the useEffect hook. ##
 
-Anything that affects something outside of the scope of the function being executed. You can sync effects by using the useEffect hook.
+
 
 ## Project Set Up
 

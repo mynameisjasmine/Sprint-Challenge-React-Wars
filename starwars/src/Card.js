@@ -17,11 +17,18 @@ display: flex;
 `
 
 function Card(props) {
+    console.log(props.value);
     return(
  <div className="people-card">
 
     <StyledCard>{props.value.name}</StyledCard>
-    <StyledFilms>{props.value.films}</StyledFilms>
+    <StyledFilms>Height: {props.value.height}</StyledFilms>
+    <StyledFilms>Mass: {props.value.mass}</StyledFilms>
+    <StyledFilms>Birth year: {props.value.birth_year}</StyledFilms>
+    <StyledFilms>Eye color: {props.value.eye_color}</StyledFilms>
+    <StyledFilms>Skin color: {props.value.skin_color}</StyledFilms>
+    <StyledFilms>Hair color: {props.value.hair_color}</StyledFilms>
+    <StyledFilms>Gender: {props.value.gender}</StyledFilms>
 </div>
 );
 
