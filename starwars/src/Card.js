@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledCard = styled.div`
-color: blue;
+color: #51A39D;
 font-size: 1.5rem;
 background-color: black;
 margin: 0px 20px 0px 20px;
