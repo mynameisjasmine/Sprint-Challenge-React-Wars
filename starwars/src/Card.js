@@ -10,9 +10,9 @@ margin: 0px 20px 0px 20px;
 
 const StyledFilms = styled.div`
 background-color: white;
-margin: 0px 20px 0px 20px;
-width: 75%;
-display: flex;
+margin: 0 1.3rem 1rem 1.3rem;
+width: 94.3%;
+
 
 `
 
